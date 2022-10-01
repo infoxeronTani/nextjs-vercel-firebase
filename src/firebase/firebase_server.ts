@@ -1,14 +1,17 @@
 import * as admin from "firebase-admin";
 
-const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n');
 
 // const { privateKey } = JSON.parse(keyString);
 
-if (privateKey === "") {
-  console.log("FIREBASE_PRIVATE_KEY is not set");
-}
 
-if (!admin.apps.length)
+
+if (!admin.apps.length){
+  const privateKey = process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+
+  if (privateKey === "") {
+    console.log("FIREBASE_PRIVATE_KEY is not set");
+  }
+
   admin.initializeApp({
     credential: admin.credential.cert({
       projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
@@ -16,6 +19,7 @@ if (!admin.apps.length)
       privateKey: privateKey
     })
   });
+}
 
 const db = admin.firestore();
 const auth = admin.auth();
