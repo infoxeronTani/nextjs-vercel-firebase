@@ -1,0 +1,142 @@
+@import '../../styles/root.scss';
+
+.LoginPromptBox {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.LoginHeader {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.1rem;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.LoginHeaderWithBox {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $font-size-normal;
+}
+.CloseIcon {
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  color: #878787;
+}
+
+.Tagline {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.HorizontalLine {
+  width: 100%;
+  height: 0.08rem;
+  color: #bbbbbb;
+  background-color: #bbbbbb;
+}
+
+.TextField {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.ForgotPassword,
+.SmallText {
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 25px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #0092e3;
+  margin: 0 auto;
+  width: 100%;
+  cursor: pointer;
+}
+.SmallText {
+  margin: 0 0.2rem;
+  font-size: 0.9rem;
+}
+.errorText {
+  margin: 0 0.2rem;
+  font-size: 0.9rem;
+  color: $error-red;
+}
+
+.SmallButton {
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.FormLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  row-gap: 0.5rem;
+}
+
+.TwoFieldRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  column-gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.RadioButtonGroup {
+  width: 100%;
+}
+
+.BottomLine {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.InfoText {
+  font-family: Circular Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 0.5rem;
+  padding: 0;
+  margin: 0;
+  color: #404040;
+}
+.OTPBox {
+  width: 100%;
+  justify-content: center;
+  & input {
+    font-size: 3rem;
+    margin: 0 0.3rem;
+    &:focus {
+      outline: 2px solid $focus-blue;
+      border: none;
+    }
+  }
+}
